@@ -1,5 +1,7 @@
 # Pratilipi
 
+![pratilipi](https://github.com/user-attachments/assets/96d75b94-7ce2-4298-8f7e-af2f231c5eb5)
+
 A key-value store for the Terminal based on HyperDB and powered by RocksDB under the hood.
 
 ***
@@ -54,3 +56,7 @@ pratilipi list -d "\t"
 ## License
 
 [MIT]
+
+## Acknowledgment
+
+Pratilipi is heavily inspired from [Skate](https://github.com/charmbracelet/skate/) but built to support networking and p2p in the future.
