@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "schema": [
+    {
+      "name": "db",
+      "namespace": "pratilipi",
+      "compact": false,
+      "flagsPosition": 2,
+      "fields": [
+        {
+          "name": "key",
+          "required": true,
+          "type": "string",
+          "version": 1
+        },
+        {
+          "name": "value",
+          "required": true,
+          "type": "buffer",
+          "version": 1
+        },
+        {
+          "name": "file",
+          "required": false,
+          "type": "bool",
+          "version": 2
+        }
+      ]
+    }
+  ]
+}

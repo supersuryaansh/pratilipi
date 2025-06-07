@@ -1,0 +1,30 @@
+{
+  "name": "pratilipi",
+  "version": "0.0.1",
+  "description": "A modern key value database for your Terminal",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "npx standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supersuryaansh/pratilipi.git"
+  },
+  "author": "supersuryaansh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supersuryaansh/pratilipi/issues"
+  },
+  "homepage": "https://github.com/supersuryaansh/pratilipi#readme",
+  "devDependencies": {
+    "standard": "^17.1.2"
+  },
+  "dependencies": {
+    "autopass": "^2.2.0",
+    "b4a": "^1.6.7",
+    "fs": "npm:bare-fs@^4.1.5",
+    "hyperdb": "^4.13.1",
+    "hyperschema": "^1.12.1",
+    "process": "npm:bare-process@^4.2.1"
+  }
+}
