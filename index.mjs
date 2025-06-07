@@ -3,8 +3,12 @@ import process from 'process'
 import HyperDB from 'hyperdb'
 import b4a from 'b4a'
 import db from './spec/db/index.js'
+import envPaths from 'env-paths'
 
-const local = HyperDB.rocks('./localdb', db)
+const paths = envPaths('pratilipi')
+
+console.log(paths.data)
+const local = HyperDB.rocks(paths.data + '/localdb', db)
 
 const [,, cmd, key, value] = process.argv
 
