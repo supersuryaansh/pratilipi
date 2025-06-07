@@ -1,6 +1,6 @@
 {
   "name": "pratilipi",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A modern key value database for your Terminal",
   "main": "index.mjs",
   "scripts": {
