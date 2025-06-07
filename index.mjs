@@ -6,8 +6,6 @@ import db from './spec/db/index.js'
 import envPaths from 'env-paths'
 
 const paths = envPaths('pratilipi')
-
-console.log(paths.data)
 const local = HyperDB.rocks(paths.data + '/localdb', db)
 
 const [,, cmd, key, value] = process.argv
