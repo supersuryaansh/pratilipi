@@ -65,16 +65,15 @@ switch (cmd) {
     }
 
     if (flag === '-d') {
-      
-    const query = await (await local.find('@pratilipi/db', {})).toArray()
+      const query = await (await local.find('@pratilipi/db', {})).toArray()
       query.forEach(element => {
-      if (!element.file) {
-        console.log(`${element.key}${value}${b4a.toString(element.value)}`)
-      } else {
-        console.log(`${element.key}${value}(omitted binary data)`)
-      }
-    })
-    break
+        if (!element.file) {
+          console.log(`${element.key}${value}${b4a.toString(element.value)}`)
+        } else {
+          console.log(`${element.key}${value}(omitted binary data)`)
+        }
+      })
+      break
     }
 
     const query = await (await local.find('@pratilipi/db', {})).toArray()
@@ -87,8 +86,11 @@ switch (cmd) {
     })
     break
   }
-
+  case '--help':
+    help()
+    break
   default:
+    help()
     break
 }
 
@@ -102,4 +104,24 @@ async function readStdin () {
   })
 }
 
+function help () {
+  const message = `
+    Pratilipi - Key value database for the Terminal
+
+    Usage:
+      pratilipi [command] [flags]
+
+    Available Commands:
+      set   Add item to the store
+      get   Get item from the store
+      delete  Delete an item 
+      list  List all keys and values
+
+    Available Flags:
+      -k  List only the keys 
+      -v  List only the values
+      -d  Use a custom delimiter
+    `
+  console.log(message)
+}
 await local.close()
