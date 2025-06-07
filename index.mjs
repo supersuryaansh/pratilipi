@@ -1,9 +1,10 @@
+#!/usr/bin/env node
 import process from 'process'
 import HyperDB from 'hyperdb'
 import b4a from 'b4a'
 import db from './spec/db/index.js'
 
-const local = HyperDB.rocks('./db', db)
+const local = HyperDB.rocks('./localdb', db)
 
 const [,, cmd, key, value] = process.argv
 

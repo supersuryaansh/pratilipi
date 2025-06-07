@@ -1,6 +1,6 @@
 {
   "name": "pratilipi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A modern key value database for your Terminal",
   "main": "index.mjs",
   "scripts": {
@@ -28,6 +28,7 @@
     "fs": "npm:bare-fs@^4.1.5",
     "hyperdb": "^4.13.1",
     "hyperschema": "^1.12.1",
+    "pratilipi": "^1.0.1",
     "process": "npm:bare-process@^4.2.1"
   }
 }
