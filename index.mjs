@@ -48,45 +48,45 @@ switch (cmd) {
   case 'list' : {
     const flag = key
     if (flag === '-k') {
-      const query = await (await local.find('@pratilipi/db', {})).toArray()
-      query.forEach(element => {
+      const query = await local.find('@pratilipi/db', {})
+      for await (const element of query) {
         console.log(element.key)
-      })
+      }
       break
     }
 
     if (flag === '-v') {
-      const query = await (await local.find('@pratilipi/db', {})).toArray()
-      query.forEach(element => {
+      const query = await local.find('@pratilipi/db', {})
+      for await (const element of query) {
         if (!element.file) {
           console.log(b4a.toString(element.value))
         } else {
           console.log('(omitted binary data)')
         }
-      })
+      }
       break
     }
 
     if (flag === '-d') {
-      const query = await (await local.find('@pratilipi/db', {})).toArray()
-      query.forEach(element => {
+      const query = await local.find('@pratilipi/db', {})
+      for await (const element of query) {
         if (!element.file) {
           console.log(`${element.key}${value}${b4a.toString(element.value)}`)
         } else {
           console.log(`${element.key}${value}(omitted binary data)`)
         }
-      })
+      }
       break
     }
 
-    const query = await (await local.find('@pratilipi/db', {})).toArray()
-    query.forEach(element => {
+    const query = await local.find('@pratilipi/db', {})
+    for await (const element of query) {
       if (!element.file) {
         console.log(element.key, b4a.toString(element.value))
       } else {
         console.log(element.key, '(omitted binary data)')
       }
-    })
+    }
     break
   }
   case '--help':
